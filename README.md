@@ -10,7 +10,7 @@ This is a resource for the users of Qidi Q2 3D printer.
 - [⚠️ Initial Build Tips](https://github.com/500Foods/WelcomeToTroodon/blob/main/docs/initial_build.md) - Getting your printer printing is job #1
 
 ## 🚀 Quick tweaks
-- How lower build plate all the way down when printing ends (https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/docs/lowertheplate.mdd) 
+- How lower build plate all the way down when printing ends (https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/docs/lowertheplate.md) 
 
 ## 🏹 Reference
 
