@@ -4,7 +4,8 @@ This is a resource for the users of Qidi Q2 3D printer.
 
 
 ## Calibrating and Tuning
-- How to tram the build plate
+- Tramming / leveling the build plate
+- E-steps 
 
 ## Quick tweaks
 - [How lower build plate all the way down when printing ends](https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/main/docs/lowertheplate.md) 
