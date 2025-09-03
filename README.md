@@ -1,4 +1,4 @@
-# Welcome To Qidi Q2 
+# Qidi Q2 funhouse
 
 This is a resource for the users of Qidi Q2 3D printer. 
 
