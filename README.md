@@ -14,5 +14,6 @@ This is a resource for the users of Qidi Q2 3D printer.
 
 ## 🏹 Reference
 
-- Components 
+- [Components: fans, steppers, etc.](https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/main/docs/components.md)
+
 <p><br></p>
