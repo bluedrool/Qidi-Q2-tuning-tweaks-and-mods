@@ -1,4 +1,4 @@
-#How to make the printer lower the build plate after printing ends
+# How to make the printer lower the build plate all the way after printing ends
 
 Change in slicer machine end G-code this line:
 
