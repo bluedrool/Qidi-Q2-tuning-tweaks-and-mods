@@ -16,7 +16,7 @@
 
 ## Stepper motors
 
-[Stepping motor BJ42D29-28V27([https://en.kelimotor.com/applist_detail/97.html)
+[Stepping motor BJ42D29-28V27(https://en.kelimotor.com/applist_detail/97.html)
 
 ### X and Y Steppers
 
