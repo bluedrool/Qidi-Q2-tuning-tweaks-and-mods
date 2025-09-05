@@ -60,7 +60,14 @@ Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
 ```
 
-Now add this to motor_database.cfg:
+I used Nano with to edit motor_database.cfg:
+
+```
+cd
+nano ./klipper/klippy/extras/motor_database.cfg
+```
+
+Add this to motor_database.cfg:
 
 ```
 [motor_constants BJ42D29-28V27]
@@ -70,6 +77,8 @@ holding_torque: 0.41
 max_current: 1.5
 steps_per_revolution: 200
 ```
+
+Control + O and then enter to confirm saves file. Control + X exits.
 
 Then in printer.cfg replace old lines with this:
 
@@ -90,9 +99,83 @@ motor: BJ42D29-28V27
 
 We will do the Z motors and extruder later when we get the values.
 
+Then you need to modify the driver configurations according to Autotune instructions:
+
+```
+Your driver configurations should contain:
+
+    Pins
+    Currents (run current, hold current, homing current if using a Klipper version that supports the latter)
+    interpolate: true
+    Comment out any other register settings and sensorless homing values (keep them for reference, but they will not be active)
+```
+
+So we modify our stepper configurations from this: 
+
+```
+[tmc2240 stepper_x]
+spi_software_sclk_pin:PA5
+spi_software_miso_pin:PA6
+spi_software_mosi_pin:PA7
+spi_speed:200000
+cs_pin:PC12
+diag0_pin:!PB8
+interpolate:true
+run_current: 1.07
+stealthchop_threshold:0
+driver_SGT:1
+#driver_SLOPE_CONTROL:2
+
+
+
+[tmc2240 stepper_y]
+spi_software_sclk_pin:PA5
+spi_software_miso_pin:PA6
+spi_software_mosi_pin:PA7
+spi_speed:200000
+cs_pin:PD2
+diag0_pin:!PC0
+interpolate:true
+run_current: 1.07
+stealthchop_threshold:0
+driver_SGT:1
+#driver_SLOPE_CONTROL:2
+```
+
+To this:
+
+```
+[tmc2240 stepper_x]
+spi_software_sclk_pin:PA5
+spi_software_miso_pin:PA6
+spi_software_mosi_pin:PA7
+spi_speed:200000
+cs_pin:PC12
+diag0_pin:!PB8
+interpolate:true
+run_current: 1.07
+#stealthchop_threshold:0
+#driver_SGT:1
+#driver_SLOPE_CONTROL:2
+
+[tmc2240 stepper_y]
+spi_software_sclk_pin:PA5
+spi_software_miso_pin:PA6
+spi_software_mosi_pin:PA7
+spi_speed:200000
+cs_pin:PD2
+diag0_pin:!PC0
+interpolate:true
+run_current: 1.07
+#stealthchop_threshold:0
+#driver_SGT:1
+#driver_SLOPE_CONTROL:2
+```
 Now you can save printer.cfg and restart Klipper. 
 
 Autotune should be enabled. 
+
+Now, it is recommended by Autotune documentation to tune sensorless homing. I tested the default values of and they work. So I didn't do the homing. It would be helpful if somebody did the homing and published the values. 
 
 Results:
 
@@ -100,3 +183,5 @@ Results:
 I ran Shake&Tune before and after enabling 
 
 I also printed a test print
+
+
