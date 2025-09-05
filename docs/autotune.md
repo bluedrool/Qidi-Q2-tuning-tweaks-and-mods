@@ -4,6 +4,8 @@ Extension web page:
 
 https://github.com/andrewmcgr/klipper_tmc_autotune
 
+## 1) Autotune installation 
+
 Qidi Q2 comes with an unknown version of this so I first renamed old files. 
 
 ```
@@ -33,6 +35,8 @@ primary_branch: main
 install_script: install.sh
 ```
 
+## 2) Inputting stepper parameters
+
 I had these lines commented out in my printer.cfg:
 
 ```
@@ -47,9 +51,32 @@ I had these lines commented out in my printer.cfg:
 #sgt: 1
 ```
 
-So Qidi installed autotune but commented it ou. Sgt value is "sensorless homing treshold" and it's default value is 1. 
+So Qidi installed autotune but commented it out. Sgt value is "sensorless homing treshold" and it's default value is 1. 
 
-Unfortunately there are no motor values for "qidi_x_y" in the old motor_database.cfg. Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27. I received the correct values from the manufacturer:
+Then replace old lines with this:
+
+```
+[autotune_tmc stepper_x]
+motor: BJ42D29-28V27
+sgt: 1
+[autotune_tmc stepper_y]
+motor: BJ42D29-28V27
+sgt: 1
+
+#[autotune_tmc stepper_z]
+#motor: 
+#[autotune_tmc stepper_z1]
+#motor: 
+
+#[autotune_tmc extruder]
+#motor: 
+```
+
+I added sgt-valuen just in case.
+
+We will do the Z motors and extruder later when we get the values.
+
+Unfortunately there are no motor values for "qidi_x_y" in the old motor_database.cfg*. Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27. I received the correct values from the manufacturer:
 
 ```
 resistance: 1.4Ω
@@ -60,6 +87,8 @@ Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
 ```
 
+You can add these to printer.cfg or motor_database.cfg. 
+
 I used Nano with to edit motor_database.cfg:
 
 ```
@@ -67,7 +96,7 @@ cd
 nano ./klipper/klippy/extras/motor_database.cfg
 ```
 
-Add this to motor_database.cfg:
+Add this to motor_database.cfg (or printer.cfg):
 
 ```
 [motor_constants BJ42D29-28V27]
@@ -80,24 +109,7 @@ steps_per_revolution: 200
 
 Control + O and then enter to confirm saves file. Control + X exits.
 
-Then in printer.cfg replace old lines with this:
-
-```
-[autotune_tmc stepper_x]
-motor: BJ42D29-28V27
-[autotune_tmc stepper_y]
-motor: BJ42D29-28V27
-
-#[autotune_tmc stepper_z]
-#motor: 
-#[autotune_tmc stepper_z1]
-#motor: 
-
-#[autotune_tmc extruder]
-#motor: 
-```
-
-We will do the Z motors and extruder later when we get the values.
+## 3) Modifying driver parameters
 
 Then you need to modify the driver configurations according to Autotune instructions:
 
@@ -171,17 +183,41 @@ run_current: 1.07
 #driver_SGT:1
 #driver_SLOPE_CONTROL:2
 ```
+
 Now you can save printer.cfg and restart Klipper. 
 
 Autotune should be enabled. 
 
-Now, it is recommended by Autotune documentation to tune sensorless homing. I tested the default values of and they work. So I didn't do the homing. It would be helpful if somebody did the homing and published the values. 
+Now, it is recommended by Autotune documentation to tune sensorless homing. I tested the default values and they work. So I didn't do the homing tuning. It would be helpful if somebody did the homing and published the values. 
 
 Results:
 
+1) The steppers seem more quiet.  
 
-I ran Shake&Tune before and after enabling 
+2) I ran Shake&Tune before and after enabling. I was curious. 
 
-I also printed a test print
+<img width="1350" height="1044" alt="autotune" src="https://github.com/user-attachments/assets/2a7163a7-1691-4510-9dfd-7867cc5f5a49" />
+
+3) I also printed an Orca VFA tower. I think there is bit less VFA, but not a large difference. Sorry, no pictures
+
+## *Update:
+
+After writing this I noticed there are motor values in printer.cfg:
+
+```
+[motor_constants qidi_x_y]
+# Coil resistance, Ohms
+resistance: 3.7
+# Coil inductance, Henries
+inductance: 0.004
+# Holding torque, Nm
+holding_torque: 0.73
+# Nominal rated current, Amps
+max_current: 2.0
+# Steps per revolution (1.8deg motors use 200, 0.9deg motors use 400)
+steps_per_revolution: 200
+```
+
+These are different from manufacturer provided values. Should we believe these values or manufacturer provided values? These could be some remnants from development with different steppers. I choose to believe the manufacturer. 
 
 
