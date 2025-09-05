@@ -190,7 +190,7 @@ Now you can save printer.cfg and restart Klipper.
 
 Now, it is recommended by Autotune documentation to tune sensorless homing. I tested the default values and they work. So I didn't do the homing tuning. It would be helpful if somebody did the homing and published the values. 
 
-If you want to get rid of it, just comment it out in printer.cfg. 
+If you want to disable Autotune, just comment it out in printer.cfg. 
 
 ## 5) Results:
 
