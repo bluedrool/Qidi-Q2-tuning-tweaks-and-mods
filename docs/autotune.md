@@ -57,7 +57,6 @@ holding_torque: ≥0.41Nm
 max_current: Rated current:1.5A
 Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
-```
 
 Now add this to motor_database.cfg:
 
