@@ -72,7 +72,7 @@ sgt: 1
 #motor: 
 ```
 
-I added sgt-valuen just in case.
+I added the sgt-value just in case.
 
 We will do the Z motors and extruder later when we get the values.
 
@@ -89,7 +89,7 @@ Rotor inertia: 76gcm²
 
 You can add these to printer.cfg or motor_database.cfg. 
 
-I used Nano with to edit motor_database.cfg:
+I used Nano to edit motor_database.cfg:
 
 ```
 cd
