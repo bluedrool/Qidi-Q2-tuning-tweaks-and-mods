@@ -51,12 +51,14 @@ So Qidi installed autotune but commented it ou. Sgt value is "sensorless homing 
 
 Unfortunately there are no motor values for "qidi_x_y" in the old motor_database.cfg. Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27. I received the correct values from the manufacturer:
 
+```
 resistance: 1.4Ω
 inductance:  2.6mH
 holding_torque: ≥0.41Nm
 max_current: Rated current:1.5A
 Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
+```
 
 Now add this to motor_database.cfg:
 
