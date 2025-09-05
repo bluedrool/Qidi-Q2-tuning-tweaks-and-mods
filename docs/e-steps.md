@@ -30,7 +30,7 @@ Then do the following steps:
 
 - there is enough slack in the hotend cables to move it carefully to to the left side
 
-3) Edit printer.cfg
+## 3) Edit printer.cfg
 
 - to go [extruder]
 
@@ -42,13 +42,13 @@ Then do the following steps:
 
 - save and restart
 
-3) Go to you printers Fluidd interface and tell it to extrude 100mm of filament at 2mm/s. Check that the filament doesn't bind anywhere while it is extruding.
+## 4) Go to you printers Fluidd interface and tell it to extrude 100mm of filament at 2mm/s. Check that the filament doesn't bind anywhere while it is extruding.
 
-4) Cut the filament using the toolheads filament cutter
+## 5) Cut the filament using the toolheads filament cutter
 
-5) Measure the filament piece with the tool you have printed and calipers (or other method). Mine was 102.42, 102.42, 102.40 so a mean of 102.41.
+## 6) Measure the filament piece with the tool you have printed and calipers (or other method). Mine was 102.42, 102.42, 102.40 so a mean of 102.41.
 
-6) Calculate new value with this formula:
+## 7) Calculate new value with this formula:
 
 <previous_rotation_distance> * ( <actual_extrude_distance> / 100 ) = <new_rotation_distance>
 
@@ -56,27 +56,25 @@ So for me this was
 
 53.7 * (102.41 / 100) = 54.99417
 
-7) Temporarily set the new value in the Fluidd console
+## 8) Temporarily set the new value in the Fluidd console
 
 Command for me:
 
 SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder DISTANCE=54.99417
 
-8) Run steps 3-6 again
+## 9) Run steps 4-8 again
 
-I would say that if you new filament lenght is within 0,1mm of 100mm (99,9-100,1) the you can move to step 9)
+I would say that if you new filament lenght is within 0.1-0.2mm of 100mm (99.8-100.2) the you can move to step 10.
 
-If it is not within 0.1mm or you want to make sure with repeated measurement, calculate the new rotation distance. 
+If it is not within 0.1-0.2mm or you want to make sure with repeated measurement, calculate the new rotation distance. 
 
 Mine was (mean of three measurements) 100.40mm. So I calculated a new rotation distance of 55.21414668 and set it:
 
 SET_EXTRUDER_ROTATION_DISTANCE EXTRUDER=extruder DISTANCE=55.21414668
 
-9) Run steps 3-6 again until you get close enough to 100mm. 
+I got it within 0.1mm of 100mm with 6 total extruded samples and stopped there. There is inaccuracy in your measuring, the extruder, cutter, measuring tool and calipers. I think under 0.2-0.3mm variance is about at the practical limit of this method. 
 
-I got it within 0.1mm of 100mm with 6 total extruded samples and stopped there. There is inaccuracy in your measuring, the extruder, cutter, measuring tool and calipers. I think under 0.3mm variance is about at the practical limit of this method. 
-
-10) Save the new value in printer.cfg
+## 10) Save the new value in printer.cfg
 
 -Find [extruder]
 
@@ -86,9 +84,9 @@ I got it within 0.1mm of 100mm with 6 total extruded samples and stopped there. 
 
 -Save and restart
 
-11) Move the hotend to the original position and carefully tighten the screws. Check that the hotend seats in place and that you don't tighten it in crooked. Replace toolhead cover. 
+## 11) Move the hotend to the original position and carefully tighten the screws. Check that the hotend seats in place and that you don't tighten it in crooked. Replace toolhead cover. 
 
-11) You are done. 
+## 11) You are done. 
 
 
 
