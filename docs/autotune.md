@@ -186,19 +186,21 @@ run_current: 1.07
 
 Now you can save printer.cfg and restart Klipper. 
 
-Autotune should be enabled. 
+## 4) Autotune should be enabled. 
 
 Now, it is recommended by Autotune documentation to tune sensorless homing. I tested the default values and they work. So I didn't do the homing tuning. It would be helpful if somebody did the homing and published the values. 
 
-Results:
+If you want to get rid of it, just comment it out in printer.cfg. 
+
+## 5) Results:
 
 1) The steppers seem more quiet.  
 
-2) I ran Shake&Tune before and after enabling. I was curious. 
+2) I ran Shake&Tune before and after enabling. I was curious if it would be affected. 
 
 <img width="1350" height="1044" alt="autotune" src="https://github.com/user-attachments/assets/2a7163a7-1691-4510-9dfd-7867cc5f5a49" />
 
-3) I also printed an Orca VFA tower. I think there is bit less VFA, but not a large difference. Sorry, no pictures
+3) I also printed an Orca VFA tower. I think there is less VFA, but not a large difference. Sorry, no pictures
 
 ## *Update:
 
