@@ -26,13 +26,19 @@
 
 42HD2037-47
 
-
-
 ## Stepper motor drivers
 
 ### X and Y Steppers
 
+TMC2240
+
 ### Z Steppers
+
+TMC2209
+
+### Extruder 
+
+TMC2209
 
 ## Power supply
 
