@@ -5,7 +5,7 @@ This is a resource for the users of Qidi Q2 3D printer.
 ## First things first
 
 - How to backup
-- 
+
 ## Calibrating and Tuning
 - Tramming / leveling the build plate
 - [E-steps](https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/main/docs/e-steps.md)
