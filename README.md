@@ -7,7 +7,7 @@ This is a resource for the users of Qidi Q2 3D printer.
 - How to backup
 
 ## Calibrating and Tuning
-- Tramming / leveling the build plate
+- [Tramming / leveling the build plate](https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/main/docs/tramming.md)
 - [E-steps](https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/main/docs/e-steps.md)
 - [Enabling TMC autotune](https://github.com/bluedrool/Qidi-Q2-tuning-tweaks-and-mods/blob/main/docs/autotune.md)
 
