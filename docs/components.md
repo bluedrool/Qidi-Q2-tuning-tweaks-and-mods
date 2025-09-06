@@ -16,11 +16,13 @@
 
 ## Stepper motors
 
-[Stepping motor BJ42D29-28V27](https://en.kelimotor.com/applist_detail/97.html)
-
 ### X and Y Steppers
 
+[Stepping motor BJ42D29-28V27](https://en.kelimotor.com/applist_detail/97.html)
+
 ### Z steppers
+
+42HD2037-47
 
 
 
@@ -31,4 +33,8 @@
 ### Z Steppers
 
 ## Power supply
+
+## X linear rail
+
+MGN12C 313mm
 
