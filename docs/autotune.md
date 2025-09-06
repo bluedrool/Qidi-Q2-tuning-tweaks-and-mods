@@ -21,7 +21,6 @@ Then I installed current version:
 cd
 wget -O - https://raw.githubusercontent.com/andrewmcgr/klipper_tmc_autotune/main/install.sh | bash
 ```
-
 Add this to moonraker.conf for automatic updates:
 
 ```
@@ -201,6 +200,10 @@ If you want to disable Autotune, just comment it out in printer.cfg.
 <img width="1350" height="1044" alt="autotune" src="https://github.com/user-attachments/assets/2a7163a7-1691-4510-9dfd-7867cc5f5a49" />
 
 3) I also printed an Orca VFA tower. I think there is less VFA, but not a large difference. Sorry, no pictures
+
+4) Driver temperatures (while printing PLA) have gone down. I was at high 60's before. 
+
+<img width="1089" height="667" alt="image" src="https://github.com/user-attachments/assets/f5e9f0fc-0e8d-4e4b-9df2-8b55914c46ae" />
 
 ## *Update:
 
