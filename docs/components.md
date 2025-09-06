@@ -4,9 +4,11 @@
 
 ### Chamber filter fan
 
-[Qinxing 8025 cooling fan](https://alexnld.com/product/av-8025m24b-dc-24v-brushless-cooling-fan-for-diy-black/)
+[Qinxing 80x80x25 cooling fan 2 pin](https://alexnld.com/product/av-8025m24b-dc-24v-brushless-cooling-fan-for-diy-black/) 
 
 ### Board fan
+
+40x40x10mm 2 pin
 
 ### Parts cooling fan
 
