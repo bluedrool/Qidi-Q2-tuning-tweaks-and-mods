@@ -38,3 +38,6 @@
 
 MGN12C 313mm
 
+## Belts
+
+1.5GT 7mm
