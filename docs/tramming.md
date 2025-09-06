@@ -1,8 +1,8 @@
 # Have an easy time tramming the Q2 bed with screws_tilt_adjust. 
 
-This video has all the instruction you need:
+This Youtube video has all the instruction you need:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/APAbl5PGEh0?si=Mophd_BM4R65iCD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![This video has all the instruction you need](https://img.youtube.com/vi/APAbl5PGEh0/0.jpg)](https://www.youtube.com/watch?v=APAbl5PGEh0)
 
 This is what you have to paste to printer.cfg:
 
