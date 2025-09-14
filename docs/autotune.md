@@ -269,7 +269,7 @@ Now, it is recommended by Autotune documentation to tune sensorless homing. I te
 
 If you want to disable Autotune, just comment it out in printer.cfg. 
 
-## 5) Results:
+## 5) Results after enabling Autotune on X and Y:
 
 1) The steppers seem more quiet.  
 
