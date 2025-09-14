@@ -28,6 +28,7 @@ holding_torque: ≥0.41Nm
 max_current: Rated current:1.5A
 Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
+
 ### Z steppers
 
 ### Z steppers 42HD2037-47
