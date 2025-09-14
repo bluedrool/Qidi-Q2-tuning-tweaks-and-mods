@@ -22,12 +22,14 @@
 
 [Stepping motor BJ42D29-28V27](https://en.kelimotor.com/applist_detail/97.html)
 
+```
 resistance: 1.4Ω
 inductance:  2.6mH
 holding_torque: ≥0.41Nm
 max_current: Rated current:1.5A
 Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
+```
 
 ### Z steppers
 
@@ -35,15 +37,25 @@ Rotor inertia: 76gcm²
 
 <img width="552" height="144" alt="Z" src="https://github.com/user-attachments/assets/9560345e-3cd9-49e9-8436-d3fdd381c445" />
 
+```
 resistance: 2.0Ω
 inductance: 3.4mH
-holding_torque: 280
+holding_torque: 0.28Nm
 max_current: 1.5
 steps_per_revolution: 200 
+```
 
 ### Extruder stepper
 
 <img width="552" height="144" alt="extruder" src="https://github.com/user-attachments/assets/392c19f5-04f2-40ec-8dee-62035936609f" />
+
+```
+resistance: 1.7Ω
+inductance: 0.9mH
+holding_torque: 0.1Nm
+max_current: 1.2
+steps_per_revolution: 200 
+```
 
 ## Stepper motor drivers
 
