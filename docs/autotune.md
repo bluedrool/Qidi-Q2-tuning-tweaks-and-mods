@@ -62,28 +62,45 @@ sgt: 1
 motor: BJ42D29-28V27
 sgt: 1
 
-#[autotune_tmc stepper_z]
-#motor: 
-#[autotune_tmc stepper_z1]
-#motor: 
+[autotune_tmc stepper_z]
+motor: 42HD2037-47
+sg4_thrs: 140
 
-#[autotune_tmc extruder]
-#motor: 
-```
+[autotune_tmc stepper_z1]
+motor: 42HD2037-47
+sg4_thrs: 140
 
-I added the sgt-value just in case.
-
-We will do the Z motors and extruder later when we get the values.
-
-Unfortunately there are no motor values for "qidi_x_y" in the old motor_database.cfg*. Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27. I received the correct values from the manufacturer:
+[autotune_tmc extruder]
+motor: Q2-extruder
 
 ```
+
+I added the sgt- and sg4_thrs-value just in case. Using previous values here.
+
+Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27 and Z steppers 42HD2037-47. I received the correct values from Qidi and the manufacturer:
+
+```
+X and Y stepper BJ42D29-28V27
 resistance: 1.4Ω
 inductance:  2.6mH
 holding_torque: ≥0.41Nm
 max_current: Rated current:1.5A
 Steps_per_revolution: 200pps
 Rotor inertia: 76gcm²
+
+Z stepper 42HD2037-47
+resistance: 2.0Ω
+inductance: 3.4mH
+holding_torque: 0.28Nm
+max_current: 1.5
+steps_per_revolution: 200 
+
+Extruder stepper
+resistance: 1.7Ω
+inductance: 0.9mH
+holding_torque: 0.1Nm
+max_current: 1.2
+steps_per_revolution: 200 
 ```
 
 You can add these to printer.cfg or motor_database.cfg. 
@@ -104,6 +121,20 @@ inductance: 0.0026
 holding_torque: 0.41
 max_current: 1.5
 steps_per_revolution: 200
+
+[motor_constants 42HD2037-47]
+resistance: 2.0
+inductance: 0.0034
+holding_torque: 0.28
+max_current: 1.5
+steps_per_revolution: 200
+
+[motor_constants Q2-extruder]
+resistance: 1.7
+inductance: 0.0009
+holding_torque: 0.1
+max_current: 1.2
+steps_per_revolution: 200
 ```
 
 Control + O and then enter to confirm saves file. Control + X exits.
@@ -121,7 +152,7 @@ Your driver configurations should contain:
     Comment out any other register settings and sensorless homing values (keep them for reference, but they will not be active)
 ```
 
-So we modify our stepper configurations from this: 
+So we modify our stepper configurations from these: 
 
 ```
 [tmc2240 stepper_x]
@@ -137,8 +168,6 @@ stealthchop_threshold:0
 driver_SGT:1
 #driver_SLOPE_CONTROL:2
 
-
-
 [tmc2240 stepper_y]
 spi_software_sclk_pin:PA5
 spi_software_miso_pin:PA6
@@ -151,9 +180,34 @@ run_current: 1.07
 stealthchop_threshold:0
 driver_SGT:1
 #driver_SLOPE_CONTROL:2
+
+[tmc2209 stepper_z1]
+uart_pin: PB7
+run_current: 1.07
+#hold_current: 0.17
+interpolate: True
+stealthchop_threshold: 9999999999
+diag_pin:^PA14
+driver_SGTHRS:140
+
+[tmc2209 stepper_z]
+uart_pin: PC5
+run_current: 1.07
+#hold_current: 0.17
+interpolate: True
+stealthchop_threshold: 9999999999
+diag_pin:^PC1
+driver_SGTHRS:140
+
+[tmc2209 extruder]
+uart_pin:THR:PC13
+interpolate: True
+run_current: 0.857
+stealthchop_threshold: 0
+
 ```
 
-To this:
+To these:
 
 ```
 [tmc2240 stepper_x]
@@ -181,6 +235,30 @@ run_current: 1.07
 #stealthchop_threshold:0
 #driver_SGT:1
 #driver_SLOPE_CONTROL:2
+
+[tmc2209 stepper_z1]
+uart_pin: PB7
+run_current: 1.07
+hold_current: 0.17
+interpolate: True
+#stealthchop_threshold: 9999999999
+diag_pin:^PA14
+#driver_SGTHRS:140
+
+[tmc2209 stepper_z]
+uart_pin: PC5
+run_current: 1.07
+hold_current: 0.17
+interpolate: True
+#stealthchop_threshold: 9999999999
+diag_pin:^PC1
+#driver_SGTHRS:140
+
+[tmc2209 extruder]
+uart_pin:THR:PC13
+interpolate: True
+run_current: 0.857
+#stealthchop_threshold: 0
 ```
 
 Now you can save printer.cfg and restart Klipper. 
