@@ -26,9 +26,9 @@ V2, updated 18/09/2025
 
 ## Verified to be needed for normal printer operation:
 
-QD_Q2 - needed for touchscreen, probably not needed if you run headless
+- QD_Q2 - needed for touchscreen, probably not needed if you run headless
 
-polkitd - PolicyKit, needed by Moonraker
+- polkitd - PolicyKit, needed by Moonraker
 
 ## How to disable useless processes 
 
