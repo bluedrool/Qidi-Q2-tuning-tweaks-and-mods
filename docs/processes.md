@@ -1,6 +1,6 @@
 # Optimizing Qidi Q2 processes
 
-V2, updated 18/09/2025
+*V2, updated 18/09/2025*
 
 ## I went through the Q2 process list and noted these process as most likely useless for me
 
