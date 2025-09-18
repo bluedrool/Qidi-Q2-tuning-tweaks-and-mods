@@ -6,9 +6,11 @@ This Youtube video has all the instruction you need:
 
 This is what you have to paste to printer.cfg:
 
-[screws_tilt_adjust]
+
 
 ```
+[screws_tilt_adjust]
+
 screw1:30,30
 screw1_name: front left screw
 
