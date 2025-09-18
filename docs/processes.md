@@ -2,7 +2,7 @@
 
 *V2, updated 18/09/2025*
 
-## I went through the Q2 process list and noted these process as most likely useless for me
+### I went through the Q2 process list and noted these process as most likely useless for normal printer operation
 
 - algo_app - Qidi service, likely needed by Qidi app / AI detection
 
@@ -24,13 +24,13 @@
 
 - openvpn - VPN, probably not needed (app might need it)
 
-## Verified to be needed for normal printer operation:
+### Verified to be needed for normal printer operation:
 
 - QD_Q2 - needed for touchscreen, probably not needed if you run headless
 
 - polkitd - PolicyKit, needed by Moonraker
 
-## How to disable useless processes 
+### How to disable useless processes 
 
 I disabled these: 
 
@@ -58,7 +58,7 @@ systemctl --user mask pulseaudio.service
 systemctl --user mask pulseaudio.socket
 ```
 
-## Results
+### Results
 
 I have now tested these for multiple prints without negative consequences. 
 
