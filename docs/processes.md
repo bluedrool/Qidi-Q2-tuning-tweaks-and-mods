@@ -62,7 +62,7 @@ systemctl --user mask pulseaudio.socket
 
 I have now tested these for multiple prints without negative consequences. 
 
-10 minutes after boot
+Resource usage 10 minutes after boot:
 
 ```
  free -h && echo "Load: $(uptime | awk -F'load average:' '{print $2}')" && echo "Processes: $(ps aux | wc -l)"
