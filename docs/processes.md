@@ -60,7 +60,7 @@ systemctl --user mask pulseaudio.socket
 
 ### Results
 
-I have now tested these for multiple prints without negative consequences. 
+I have now tested these for multiple prints without negative consequences. Fluidd interface feels noticeably faster. 
 
 Resource usage 10 minutes after boot:
 
