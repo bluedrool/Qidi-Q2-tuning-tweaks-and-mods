@@ -4,25 +4,25 @@ V2, updated 18/09/2025
 
 ## I went through the Q2 process list and noted these process as most likely useless for me
 
-algo_app - Qidi service, likely needed by Qidi app / AI detection
+- algo_app - Qidi service, likely needed by Qidi app / AI detection
 
-QIDILink-client.service - Qidi service , likely needed by Qidi app / AI detection
+- QIDILink-client.service - Qidi service , likely needed by Qidi app / AI detection
 
-bluetoothd - Bluetooth service 
+- bluetoothd - Bluetooth service 
 
-pulseaudio - PulseAudio 
+- pulseaudio - PulseAudio 
 
-lightdm - Display manager (I don't think this is needed for Klipper display) 
+- lightdm - Display manager (I don't think this is needed for Klipper display) 
 
-packagekitd - Package manager (I think this is only neede for desktop GUI update manager?)
+- packagekitd - Package manager (I think this is only neede for desktop GUI update manager?)
 
-xl2tpd - XL2TP Daemon (VPN services, might be used by Qidi Link? 
+- xl2tpd - XL2TP Daemon (VPN services, might be used by Qidi Link? 
 
-triggerhappy - "a lightweight hotkey daemon", I don't think this is needed since the printer has no buttons
+- triggerhappy - "a lightweight hotkey daemon", I don't think this is needed since the printer has no buttons
 
-strongswan - VPN stuff, probably not need (app might need it)
+- strongswan - VPN stuff, probably not need (app might need it)
 
-openvpn - VPN, probably not needed (app might need it)
+- openvpn - VPN, probably not needed (app might need it)
 
 ## Verified to be needed for normal printer operation:
 
@@ -49,7 +49,7 @@ sudo systemctl disable --now packagekit
 sudo systemctl disable --now xl2tpd
 ```
 
-After reboot these came back so I masked them: PulseAudio, PackageKit, QIDILink, pulseaudio
+After reboot some came back so I masked them: PulseAudio, PackageKit, QIDILink, pulseaudio
 
 ```
 sudo systemctl mask packagekit
