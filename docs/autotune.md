@@ -77,7 +77,7 @@ motor: Q2-extruder
 
 I added the sgt- and sg4_thrs-value just in case. Using previous values here.
 
-Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27 and Z steppers 42HD2037-47. I received the correct values from Qidi and the manufacturer:
+Qidi Q2 XY steppers are labeled "Stepping motor BJ42D29-28V27 and Z steppers 42HD2037-47. I received the correct values from Qidi and the manufacturer (these values are only for reference, do not add them to config files):
 
 ```
 X and Y stepper BJ42D29-28V27
