@@ -275,7 +275,7 @@ If you want to disable Autotune, just comment it out in printer.cfg.
 
 1) The steppers seem more quiet.  
 
-2) I ran Shake&Tune before and after enabling. I was curious if it would be affected. 
+2) I ran Shake&Tune before and after enabling. I was curious if it would be affected. I don't see an effect. 
 
 <img width="1350" height="1044" alt="autotune" src="https://github.com/user-attachments/assets/2a7163a7-1691-4510-9dfd-7867cc5f5a49" />
 
