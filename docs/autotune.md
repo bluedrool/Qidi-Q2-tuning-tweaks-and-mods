@@ -115,6 +115,9 @@ nano ./klipper/klippy/extras/motor_database.cfg
 Add this to motor_database.cfg (or printer.cfg):
 
 ```
+
+# Qidi Q2 motors
+
 [motor_constants BJ42D29-28V27]
 resistance: 1.4
 inductance: 0.0026
