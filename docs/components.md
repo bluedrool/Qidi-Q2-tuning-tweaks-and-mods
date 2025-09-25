@@ -73,6 +73,8 @@ TMC2209
 
 ## Power supply
 
+CZL-350d-24
+
 ## X linear rail
 
 MGN12C 313mm
