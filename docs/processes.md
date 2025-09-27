@@ -32,7 +32,7 @@
 
 - polkitd - PolicyKit, needed by Moonraker
 
-### How to disable useless processes 
+## How to disable useless processes 
 
 I disabled these: 
 
