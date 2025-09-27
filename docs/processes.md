@@ -24,7 +24,7 @@
 
 ### Might be needed 
 
-- packagekitd - Package manager - two reports that it is needed when installing new software and mods
+- packagekitd - Package manager - two reports that it is needed when installing Klipperscreen and other mods
 
 ### Verified to be needed for normal printer operation:
 
