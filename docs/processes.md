@@ -14,8 +14,6 @@
 
 - lightdm - Display manager (I don't think this is needed for Klipper display) 
 
-- packagekitd - Package manager (I think this is only neede for desktop GUI update manager?)
-
 - xl2tpd - XL2TP Daemon (VPN services, might be used by Qidi Link? 
 
 - triggerhappy - "a lightweight hotkey daemon", I don't think this is needed since the printer has no buttons
@@ -23,6 +21,10 @@
 - strongswan - VPN stuff, probably not need (app might need it)
 
 - openvpn - VPN, probably not needed (app might need it)
+
+### Might be needed 
+
+- packagekitd - Package manager - two reports that it is needed when installing new software and mods
 
 ### Verified to be needed for normal printer operation:
 
