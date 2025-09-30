@@ -1,5 +1,9 @@
 # This is a list of Qidi Q2 components
 
+## Toolhdead MCU
+
+[THR MCU  Gigadevice GD32F303CBT6]([(https://download.gigadevice.com/Datasheet/GD32F303xx_Datasheet_Rev3.1.pdf]) 
+
 ## Fans
 
 ### Chamber filter fan
