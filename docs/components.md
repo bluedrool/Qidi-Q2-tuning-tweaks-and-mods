@@ -2,7 +2,7 @@
 
 ## Toolhdead 
 
-[MCU  Gigadevice GD32F303CBT6]([(https://download.gigadevice.com/Datasheet/GD32F303xx_Datasheet_Rev3.1.pdf]) 
+[MCU  Gigadevice GD32F303CBT6](https://download.gigadevice.com/Datasheet/GD32F303xx_Datasheet_Rev3.1.pdf]) 
 
 ## Fans
 
