@@ -1,4 +1,4 @@
-# How to use the Fan 2 header in toolhead in Klipper
+# How to use the toolhead fan 2 header in Klipper
 
 Information thanks to weaw on Qidi discord. 
 
