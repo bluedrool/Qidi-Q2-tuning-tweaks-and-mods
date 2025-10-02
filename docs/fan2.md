@@ -1,6 +1,6 @@
 # How to use the toolhead fan 2 header in Klipper
 
-Information thanks to weaw on Qidi discord. 
+Information and thanks to weaw on Qidi discord. 
 
 Add this to printer.cfg
 
@@ -15,3 +15,5 @@ kick_start_time: 0.100
 ```
 
 Now you can use the additional fan head for 2 pin 24V fan.
+
+<img width="1187" height="1201" alt="image" src="https://github.com/user-attachments/assets/19ace641-d3ff-45a8-a812-1d72c3cebc16" />
