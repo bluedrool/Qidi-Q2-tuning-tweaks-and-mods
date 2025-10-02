@@ -14,6 +14,6 @@ hardware_pwm: False
 kick_start_time: 0.100
 ```
 
-Now you can use the additional fan head for 2 pin 24V fan.
+Save and restart Klipper. Now you can use the additional fan head for 2 pin 24V fan.
 
 <img width="1187" height="1201" alt="image" src="https://github.com/user-attachments/assets/19ace641-d3ff-45a8-a812-1d72c3cebc16" />
