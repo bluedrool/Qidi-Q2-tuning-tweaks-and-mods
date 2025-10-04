@@ -4,6 +4,8 @@ Extension web page:
 
 https://github.com/andrewmcgr/klipper_tmc_autotune
 
+**Note: Two users on Discords reported that enabling autotune on extruder caused an over temperature warning for the extruder driver. If you get a warning, comment extruder driver out.**
+
 ## 1) Autotune installation 
 
 Qidi Q2 comes with an unknown version of this so I first renamed old files. 
