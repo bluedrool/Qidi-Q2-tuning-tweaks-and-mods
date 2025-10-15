@@ -6,7 +6,7 @@ https://github.com/andrewmcgr/klipper_tmc_autotune
 
 __**Note: Two users on Discords reported that enabling autotune on extruder caused an over temperature warning for the extruder driver. If you get a warning, comment extruder driver out. Or don't enable it at all.**__
 
-__**Note 2: One user reported that the over temperature was not resolved by uninstalling autotune so it is unlikely that it is caused by it.**__
+__**Note 2: One user reported that the over temperature warning was not resolved by uninstalling autotune so it is unlikely that it is caused by it.**__
 
 ## 1) Autotune installation 
 
