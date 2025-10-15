@@ -44,7 +44,6 @@ sudo systemctl disable --now openvpn.service
 sudo systemctl disable --now triggerhappy.service
 systemctl --user disable --now pulseaudio.service
 systemctl --user disable --now pulseaudio.socket
-sudo systemctl disable --now polkit
 sudo systemctl disable --now bluetooth
 sudo systemctl disable --now lightdm
 sudo systemctl disable --now packagekit
