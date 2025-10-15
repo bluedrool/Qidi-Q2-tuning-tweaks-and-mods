@@ -25,5 +25,5 @@ This is a resource for the users of Qidi Q2 3D printer.
 
 - [Qidi Q2 wiki](https://wiki.qidi3d.com/en/Q2)
 - [Ellis' tuning guide](https://ellis3dp.com/Print-Tuning-Guide/)
-
+- [MI3, lots of original models for the Q2](https://odysee.com/@The_Mi3_Channel:f?view=content)
 <p><br></p>
