@@ -28,7 +28,7 @@
 
 ### Verified to be needed for normal printer operation:
 
-- QD_Q2 - needed for touchscreen, probably not needed if you run headless
+- QD_Q2 - needed for touchscreen, probably not needed if you run headless or with Klipperscreen
 
 - polkitd - PolicyKit, needed by Moonraker
 
